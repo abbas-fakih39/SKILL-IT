@@ -231,14 +231,14 @@
     </svg>
 
     <header>
-        <div class="brand">SKILL IT <span style="font-weight: 300; opacity: 0.5; font-size: 0.8em;">!</span></div>
+        <div class="brand">SKILL IT !<span style="font-weight: 300; opacity: 0.5; font-size: 0.8em;"></span></div>
     </header>
 
     <main>
         <section id="view-dictionary" class="view-section active">
             <div class="search-wrapper">
                 <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-                <input type="text" id="searchInput" class="search-input" placeholder="Search aether...">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for a soft skill...">
             </div>
             <div id="skillsList"></div>
         </section>
@@ -254,9 +254,9 @@
                         <path d="M12 12 21.9 21.9"></path>
                     </svg>
                 </div>
-                <h2 style="margin-bottom: 10px;">Scenario Simulation</h2>
-                <p class="text-sm" style="margin-bottom: 20px; color: #ccc;">Distort reality. Test your reflexes.</p>
-                <button id="btnGenerateScenario" class="action-btn">Initialize</button>
+                <h2 style="margin-bottom: 10px;">Scenario Generator</h2>
+                <p class="text-sm" style="margin-bottom: 20px; color: #ccc;">Test your knowledge.</p>
+                <button id="btnGenerateScenario" class="action-btn">Generate</button>
             </div>
             
             <div id="scenarioOutputContainer" style="display:none; margin-top: 2rem;">
@@ -282,7 +282,7 @@
                     <div class="card-face card-back" id="cardBackFace"></div>
                 </div>
             </div>
-            <button id="btnDrawCard" class="action-btn">Draw Flux Card</button>
+            <button id="btnDrawCard" class="action-btn">Draw Card</button>
         </section>
     </main>
 
@@ -290,7 +290,7 @@
         <nav class="dock-glass">
             <button class="nav-btn active" data-target="view-dictionary">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                Data
+                Dictionary
             </button>
             <button class="nav-btn" data-target="view-scenarios">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -526,9 +526,8 @@
         const cards = [
             { name: "Flux Surge", type: "bonus", effect: "+2 Points", icon: "⚡", color: "#00f2ff" },
             { name: "Void", type: "penalty", effect: "Lose Turn", icon: "✕", color: "#ff0055" },
-            { name: "Nebula", type: "special", effect: "Swap Hands", icon: "∞", color: "#bd00ff" },
-            { name: "Oracle", type: "bonus", effect: "Peek Deck", icon: "👁", color: "#00f2ff" },
-            { name: "Supernova", type: "bonus", effect: "2x Score", icon: "★", color: "#ffd700" }
+            { name: "Supernova", type: "bonus", effect: "2x Score", icon: "★", color: "#ffd700" },
+            { name: "Entropy", type: "penalty", effect: "-1 Point", icon: "↓", color: "#ff4500" }
         ];
 
         /* --- APP LOGIC --- */
