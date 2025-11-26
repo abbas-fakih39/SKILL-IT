@@ -585,7 +585,17 @@
             document.getElementById('sheetPhonetic').textContent = data.phonetic;
             document.getElementById('sheetDef').textContent = data.definition;
             document.getElementById('sheetEx').textContent = `"${data.example}"`;
-            document.getElementById('btnSpeak').onclick = () => { window.speechSynthesis.speak(new SpeechSynthesisUtterance(data.term)); };
+            document.getElementById('btnSpeak').onclick = () => { 
+    const utterance = new SpeechSynthesisUtterance(data.term);
+    
+    utterance.lang = 'en-US'; 
+    
+    utterance.rate = 0.9; 
+
+    window.speechSynthesis.cancel();
+    
+    window.speechSynthesis.speak(utterance); 
+}
             sheet.classList.add('open');
         }
 
